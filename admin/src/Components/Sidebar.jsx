@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { IoAddCircleOutline, IoLogOutOutline } from 'react-icons/io5'
-import { MdFormatListBulleted } from 'react-icons/md'
+import { MdFormatListBulleted, MdDashboard, MdBarChart } from 'react-icons/md'
 import { PiListBulletsFill } from "react-icons/pi"
 
 const Sidebar = ({ setToken }) => {
@@ -21,6 +21,11 @@ const Sidebar = ({ setToken }) => {
       </div>
 
       <nav className="flex-1 space-y-2">
+        <NavLink to="/" end className={linkClass}>
+          <MdDashboard className="text-xl" />
+          <span className="font-medium">Dashboard</span>
+        </NavLink>
+
         <NavLink to="/add" className={linkClass}>
           <IoAddCircleOutline className="text-xl" />
           <span className="font-medium">Add Menu</span>
@@ -34,6 +39,11 @@ const Sidebar = ({ setToken }) => {
         <NavLink to="/table" className={linkClass}>
           <PiListBulletsFill className="text-xl" />
           <span className="font-medium">Reservations</span>
+        </NavLink>
+
+        <NavLink to="/report" className={linkClass}>
+          <MdBarChart className="text-xl" />
+          <span className="font-medium">Daily Report</span>
         </NavLink>
       </nav>
 

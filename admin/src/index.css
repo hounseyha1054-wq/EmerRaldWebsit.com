@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+@media print {
+  /* Hide everything except the print area */
+  body > * { display: none !important; }
+
+  /* Show only our target */
+  #print-area,
+  #print-area * { display: revert !important; }
+
+  /* Put the print area back in normal flow */
+  #print-area {
+    position: static !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 1rem !important;
+  }
+
+  /* Hide action buttons inside the print area */
+  .no-print { display: none !important; }
+}

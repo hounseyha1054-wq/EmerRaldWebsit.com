@@ -1,16 +1,15 @@
-import React from 'react'
-import Hero from '../Components/Hero'
-import Menu from '../Components/Menu'
-import ReservationForm from '../Components/ReservationForm'
-const Homepage = () => {
-  return (
-    <div>
-       <Hero/>
-       <Menu/>
-       <ReservationForm/>
-       
-    </div>
-  )
-}
+import Hero from '../Components/Hero';
+import Menu from '../Components/Menu';
+import ReservationForm from '../Components/ReservationForm';
 
-export default Homepage
+const Homepage = ({ onAuthRequired }) => {
+  return (
+    <div className="bg-zinc-950">
+      <Hero onAuthRequired={onAuthRequired} />
+      <Menu onAuthRequired={onAuthRequired} />
+      <ReservationForm onAuthRequired={onAuthRequired} />
+    </div>
+  );
+};
+
+export default Homepage;

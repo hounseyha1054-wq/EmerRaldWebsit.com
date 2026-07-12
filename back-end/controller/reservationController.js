@@ -6,7 +6,7 @@ const addReservation = async(req,res)=>{
        const newReservation= new reservationModel({name,email,phone,date,time,guests})
 
        await newReservation.save()
-       res.json({message:"Reservation added successfully"})
+       res.json({success: true, message:"Reservation added successfully"})
 
     }catch(error){
         console.log(error);
