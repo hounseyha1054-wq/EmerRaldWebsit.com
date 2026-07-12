@@ -1,11 +1,11 @@
 import express from 'express'
 import cors from 'cors'
 import 'dotenv/config'
-import ConnectDb from './config/mongoDb.js'
-import CloudinaryConfig from './config/cloundinary.js'
-import UserRouter from './route/userRouter.js'
-import ProductRouter from './route/productRouter.js'
-import reservationRouter from './route/reservationRouter.js'
+import ConnectDb from '../config/mongoDb.js'
+import CloudinaryConfig from '../config/cloundinary.js'
+import UserRouter from '../route/userRouter.js'
+import ProductRouter from '../route/productRouter.js'
+import reservationRouter from '../route/reservationRouter.js'
  
 const app = express()
 const port = process.env.PORT||4000
