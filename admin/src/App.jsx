@@ -8,7 +8,7 @@ import ListMenu from './pages/ListMenu.jsx'
 import AdminTable from './pages/AdminTable.jsx'
 import Dashboard from './pages/Dashboard.jsx'
 import ReportPage from './pages/ReportPage.jsx'
-export const Url_backend = 'http://localhost:4000'
+export const Url_backend = import.meta.env.VITE_BACKEND_URL || 'https://back-endemerald-bistro-com-1.onrender.com'
 
 const App = () => {
 

@@ -8,7 +8,7 @@ import { Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export const Url_backend = 'http://localhost:4000';
+export const Url_backend = import.meta.env.VITE_BACKEND_URL || 'https://back-endemerald-bistro-com-1.onrender.com';
 
 const App = () => {
   const [authOpen, setAuthOpen] = useState(false);
